@@ -21,7 +21,7 @@ var solution = function(isBadVersion) {
         let left = 1;
         let right = n;
         while (left < right) {
-            const mid = parseInt(left + ((right - left) / 2));
+            const mid = left + parseInt((right - left) / 2);
             isBadVersion(mid)
                 ? right = mid
                 : left = mid + 1;
